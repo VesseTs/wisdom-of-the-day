@@ -16,27 +16,21 @@ const quotes = [
 ];
 
 function App() {
-  // State for managing dark theme
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [quoteIndex, setQuoteIndex] = useState(0); // State for the current quote index
 
-  // Toggle dark theme
-  const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
+  // Change the quote when the button is clicked
+  const changeQuote = () => {
+    const nextQuoteIndex = (quoteIndex + 1) % quotes.length; // Loop through quotes
+    setQuoteIndex(nextQuoteIndex);
   };
 
-  // Get a random quote
-  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
   return (
-    <div className={`App ${isDarkTheme ? "dark" : ""}`}>
-      <header className="App-header">
-        <h1>Wisdom of the Day</h1>
-        <p className="quote-text">"{randomQuote.text}"</p>
-        <p className="author">- {randomQuote.author}</p>
-        <button onClick={toggleTheme}>
-          Switch to {isDarkTheme ? "Light" : "Dark"} Theme
-        </button>
-      </header>
+    <div className="App dark">
+      <div className="quote-container">
+        <p className="quote-text">"{quotes[quoteIndex].text}"</p>
+        <p className="author-text">- {quotes[quoteIndex].author}</p>
+        <button onClick={changeQuote} className="get-quote-btn">Get Wisdom</button>
+      </div>
     </div>
   );
 }

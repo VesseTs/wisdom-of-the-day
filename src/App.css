@@ -1,69 +1,42 @@
-/* App.css */
-
 .App {
   text-align: center;
-  font-family: Arial, sans-serif;
   padding: 20px;
 }
 
-.App-header {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+.quote-container {
+  margin-bottom: 20px;
 }
 
 .quote-text {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 24px;
+  font-style: italic;
 }
 
-.author {
-  font-size: 1rem;
-  color: #555;
-  margin-top: 10px;
+.author-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.get-quote-btn {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.dark {
+  background-color: #333;
+  color: #f9f9f9;
 }
 
 button {
-  padding: 10px 20px;
-  margin-top: 20px;
-  background-color: #007bff;
+  background-color: #008CBA;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
-}
-
-/* Dark theme styles */
-.App.dark {
-  background-color: #121212;
-  color: white;
-}
-
-.App.dark .App-header {
-  background-color: #333;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-}
-
-.App.dark .quote-text {
-  color: #fff;
-}
-
-.App.dark .author {
-  color: #ccc;
-}
-
-.App.dark button {
-  background-color: #444;
-  border: 1px solid #666;
-}
-
-.App.dark button:hover {
-  background-color: #222;
+  background-color: #005f73;
 }
